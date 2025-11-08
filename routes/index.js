@@ -1,14 +1,13 @@
 const router = require('express').Router();
-const contactsController = require('../controllers/contacts');
+
+router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {
+  //#swagger.tags = ['Hello World']
   res.send('Hello World!');
 });
 
 router.use('/contacts', require('./contacts'));
 
 module.exports = router;
-
-router.get('/', contactsController.getAllContacts);
-router.get('/:id', contactsController.getContactById);
 

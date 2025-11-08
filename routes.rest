@@ -1,0 +1,30 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get a contact by ID
+GET http://localhost:3000/contacts/690f7c57acf5b44c3924afe3
+
+### Create a new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "email": "testpost@example.com",
+    "username": "testpost@7example.com",
+    "name": "testpost",
+    "ipaddress": ""
+}
+
+### Update a contact by ID
+PUT http://localhost:3000/contacts/690f922e9a8431350503b246
+Content-Type: application/json
+
+{
+    "name": "testpost",
+    "email": "testpost@example.com",
+    "username": "testpost@7example.com",
+    "ipaddress": "1.1.1.1"
+}
+
+### Delete a contact by ID
+DELETE http://localhost:3000/contacts/690f9171ed97440bfa738a98
